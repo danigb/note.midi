@@ -18,6 +18,7 @@ var SEMITONES = [ 0, 2, 4, 5, 7, 9, 11 ]
  * @example
  * midi('A4') // => 69
  * midi('A3') // => 57
+ * midi([0, 0, 2]) // => 36 (the pitch-array of C2)
  */
 module.exports = function midi (note) {
   var p = Array.isArray(note) ? note : parser(note)
