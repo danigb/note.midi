@@ -19,7 +19,8 @@
 <dd>
 <div class="description">
 <p>Get the midi number of a note</p>
-<p>The note can be an string in scientific notation or a <a href="https://github.com/danigb/pitch-array">pitch-array</a></p>
+<p>The note can be an string in scientific notation or
+<a href="https://github.com/danigb/music.array.notation">array pitch notation</a></p>
 </div>
 <h5>Parameters:</h5>
 <table class="params">
@@ -67,7 +68,7 @@ Type
 <h5>Example</h5>
 <pre class="prettyprint"><code>midi('A4') // => 69
 midi('A3') // => 57
-midi([0, 0, 2]) // => 36 (the pitch-array of C2)</code></pre>
+midi([0, 0, 2]) // => 36 (C2 in array notation)</code></pre>
 </dd>
 </dl>
 </article>

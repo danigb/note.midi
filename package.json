@@ -33,6 +33,6 @@
     "vows": "^0.8.1"
   },
   "dependencies": {
-    "music.note.parser": "0.0.x"
+    "music.note.scientific.parse": "0.0.x"
   }
 }
