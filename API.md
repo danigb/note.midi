@@ -66,7 +66,8 @@ Type
 </dl>
 <h5>Example</h5>
 <pre class="prettyprint"><code>midi('A4') // => 69
-midi('A3') // => 57</code></pre>
+midi('A3') // => 57
+midi([0, 0, 2]) // => 36 (the pitch-array of C2)</code></pre>
 </dd>
 </dl>
 </article>

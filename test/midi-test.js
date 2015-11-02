@@ -10,6 +10,11 @@ vows.describe('music.note.midi').addBatch({
     assert.deepEqual('Cb4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Cb4'.split(' ').map(midi), [59, 61, 63, 64, 66, 68, 70, 59])
     assert.deepEqual('Cbb3 Dbb3 Ebb3 Fbb3 Gbb3 Abb3 Bbb3 Cbb3'.split(' ').map(midi), [46, 48, 50, 51, 53, 55, 57, 46])
   },
+  'array notation': function () {
+    assert.equal(midi([0, 0, 2]), 36)
+    assert.equal(midi([4, 4, 2, 0]), 47)
+    assert.equal(midi([4, 1]), null)
+  },
   'note class does not have midi': function () {
     assert.deepEqual('C D E F G A B C'.split(' ').map(midi), [ null, null, null, null, null, null, null, null ])
   },
