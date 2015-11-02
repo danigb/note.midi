@@ -8,13 +8,15 @@
 [![license](https://img.shields.io/npm/l/music.note.midi.svg)](https://www.npmjs.com/package/music.note.midi)
 [![music.kit](https://img.shields.io/badge/music-kit-yellow.svg)](https://www.npmjs.com/package/music.kit)
 
-`music.note.midi` is a tiny (641 bytes minidifed) function to get the midi number from a note name:
+`music.note.midi` is a tiny function (641 bytes minified) to get the midi number from a note name:
 
 ```js
 var midi = require('music.note.midi')
 midi('A4') // => 69
 midi('C2') // => 36
 ```
+
+See [music.note.fromMidi](https://github.com/danigb/music.note.fromMidi) for the opposite operation.
 
 This is part of [music.kit](https://github.com/danigb/music.kit)
 
