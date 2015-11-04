@@ -2,9 +2,6 @@
 
 var parse = require('music.note.scientific.parse')
 
-// Semitones from C to C D E F G A B
-var SEMITONES = [ 0, 2, 4, 5, 7, 9, 11 ]
-
 /**
  * Get the midi number of a note
  *
@@ -19,10 +16,13 @@ var SEMITONES = [ 0, 2, 4, 5, 7, 9, 11 ]
  * @example
  * midi('A4') // => 69
  * midi('A3') // => 57
- * midi([0, 0, 2]) // => 36 (C2 in array notation)
+ * midi([1, 1]) // => 36 (C2 in array notation)
  */
-module.exports = function midi (note) {
+function midi (note) {
   var p = Array.isArray(note) ? note : parse(note)
-  if (!p || (!p[2] && p[2] !== 0)) return null
-  return SEMITONES[p[0]] + p[1] + 12 * (p[2] + 1)
+  if (!p || p.length < 2) return null
+  return p[0] * 7 + p[1] * 12 + 17
 }
+
+if (typeof module === 'object' && module.exports) module.exports = midi
+if (typeof window !== 'undefined') window.midi = midi

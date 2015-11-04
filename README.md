@@ -22,7 +22,7 @@ This is part of [music.kit](https://github.com/danigb/music.kit)
 
 ## Installation
 
-Install via npm: `npm install --save music.note.midi` and require it.
+Install via npm: `npm install --save music.note.midi` or use add the dist file to the html page.
 
 ## Documentation
 
