@@ -2,7 +2,7 @@ var vows = require('vows')
 var assert = require('assert')
 var midi = require('../')
 
-vows.describe('music.note.midi').addBatch({
+vows.describe('note.midi').addBatch({
   'note to midi': function () {
     assert.deepEqual('C4 D4 E4 F4 G4 A4 B4 C4'.split(' ').map(midi), [60, 62, 64, 65, 67, 69, 71, 60])
     assert.deepEqual('C#4 D#4 E#4 F#4 G#4 A#4 B#4 C#4'.split(' ').map(midi), [61, 63, 65, 66, 68, 70, 72, 61])
