@@ -19,5 +19,3 @@ midi([1, 1]) // => 36 (C2 in array notation)
 ```
 
 Returns `Integer` the midi number
-
-

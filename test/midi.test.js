@@ -11,8 +11,7 @@ vows.describe('music.note.midi').addBatch({
     assert.deepEqual('Cbb3 Dbb3 Ebb3 Fbb3 Gbb3 Abb3 Bbb3 Cbb3'.split(' ').map(midi), [46, 48, 50, 51, 53, 55, 57, 46])
   },
   'array notation': function () {
-    assert.equal(midi([1, 1]), 36)
-    assert.equal(midi([30, -15]), 47)
+    assert.equal(midi([0, 4]), 60)
     assert.equal(midi([4]), null)
   },
   'note class does not have midi': function () {

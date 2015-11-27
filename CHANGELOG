@@ -1,6 +1,7 @@
 CHANGELOG
 
-[0.0.2] Use an array notation parser. Add dist file.
+[0.0.3] Use tonal.notation (1.7kb / 1kb)
+[0.0.2] Use an array notation parser. Add dist file. (708 bytes)
 [0.0.1] First version
 
 SIZE

@@ -1,6 +1,6 @@
 'use strict'
 
-var parse = require('music.note.scientific.parse')
+var parse = require('tonal.notation/note.parse')
 
 /**
  * Get the midi number of a note
@@ -15,13 +15,13 @@ var parse = require('music.note.scientific.parse')
  *
  * @example
  * midi('A4') // => 69
- * midi('A3') // => 57
- * midi([1, 1]) // => 36 (C2 in array notation)
+ * midi('a3') // => 57
+ * midi([0, 2]) // => 36 (C2 in array notation)
  */
 function midi (note) {
   var p = Array.isArray(note) ? note : parse(note)
   if (!p || p.length < 2) return null
-  return p[0] * 7 + p[1] * 12 + 17
+  return p[0] * 7 + p[1] * 12 + 12
 }
 
 if (typeof module === 'object' && module.exports) module.exports = midi
