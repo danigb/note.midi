@@ -5,6 +5,8 @@ var parse = require('tonal.notation/note.parse')
 /**
  * Get the midi number of a note
  *
+ * If the argument passed to this function is a valid midi number, it returns it
+ *
  * The note can be an string in scientific notation or
  * [array pitch notation](https://github.com/danigb/music.array.notation)
  *
@@ -17,8 +19,11 @@ var parse = require('tonal.notation/note.parse')
  * midi('A4') // => 69
  * midi('a3') // => 57
  * midi([0, 2]) // => 36 (C2 in array notation)
+ * midi(60) // => 50
  */
 function midi (note) {
+  if ((typeof note === 'number' || typeof note === 'string') &&
+    note > 0 && note < 128) return +note
   var p = Array.isArray(note) ? note : parse(note)
   if (!p || p.length < 2) return null
   return p[0] * 7 + p[1] * 12 + 12

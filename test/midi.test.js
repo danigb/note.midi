@@ -10,6 +10,12 @@ vows.describe('note.midi').addBatch({
     assert.deepEqual('Cb4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Cb4'.split(' ').map(midi), [59, 61, 63, 64, 66, 68, 70, 59])
     assert.deepEqual('Cbb3 Dbb3 Ebb3 Fbb3 Gbb3 Abb3 Bbb3 Cbb3'.split(' ').map(midi), [46, 48, 50, 51, 53, 55, 57, 46])
   },
+  'midi values are bypassed': function () {
+    assert.equal(midi(60), 60)
+    assert.equal(midi(-1), null)
+    assert.equal(midi(128), null)
+    assert(midi('60') === 60)
+  },
   'array notation': function () {
     assert.equal(midi([0, 4]), 60)
     assert.equal(midi([4]), null)

@@ -2,6 +2,8 @@
 
 Get the midi number of a note
 
+If the argument passed to this function is a valid midi number, it returns it
+
 The note can be an string in scientific notation or
 [array pitch notation](https://github.com/danigb/music.array.notation)
 
@@ -14,8 +16,11 @@ The note can be an string in scientific notation or
 
 ```js
 midi('A4') // => 69
-midi('A3') // => 57
-midi([1, 1]) // => 36 (C2 in array notation)
+midi('a3') // => 57
+midi([0, 2]) // => 36 (C2 in array notation)
+midi(60) // => 50
 ```
 
 Returns `Integer` the midi number
+
+

@@ -1,7 +1,7 @@
 {
   "name": "note.midi",
-  "version": "0.0.3",
-  "description": "Get the midi number of a note",
+  "version": "0.0.4",
+  "description": "Musical note to midi conversion",
   "main": "index.js",
   "scripts": {
     "build": "npm test && npm run docs && npm run coverage && npm run disc && npm run dist",
